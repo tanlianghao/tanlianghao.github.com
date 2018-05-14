@@ -46,8 +46,9 @@
         savePrompt = e;
         return false;
       })
-      console.log(123)
+      console.log(btnSave);
       btnSave.addEventListener('click', function(){
+        console.log(123)
         if (savedPrompt !== undefined) {                                                       
           savedPrompt.prompt();                                                                
           savedPrompt.userChoice.then(function (result) {                                      
