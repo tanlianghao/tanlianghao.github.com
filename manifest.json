@@ -2,8 +2,8 @@
   "name": "Progressive Times web app",
   "short_name": "Progressive Times",
   "start_url": "./index.html",
-  "theme_color": "red",
-  "background_color": "red",
+  "theme_color": "#FFD700",
+  "background_color": "#FFD700",
   "display": "fullscreen",
   "icons": [
     {
