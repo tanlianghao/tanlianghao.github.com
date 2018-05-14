@@ -27,9 +27,6 @@
   <!-- javaScript -->
   <script async src="./js/main.js"></script>
   <script>
-    window.addEventListener('load', function(){
-      var btnSave = document.getElementById('btnSave');
-      var savePrompt;
       // Register the service worker
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./sw.js').then(function(registration) {
@@ -39,30 +36,6 @@
           console.log('defail register:', err);
         })
       }
-
-      window.addEventListener('beforeinstallprompt',function(e){
-        e.preventDefault();
-        btnSave.removeAttribute('disabled');
-        savePrompt = e;
-        return false;
-      })
-      console.log(btnSave);
-      btnSave.addEventListener('click', function(){
-        console.log(123)
-        if (savedPrompt !== undefined) {                                                       
-          savedPrompt.prompt();                                                                
-          savedPrompt.userChoice.then(function (result) {                                      
-            if (result.outcome == 'dismissed') {
-              console.log('User dismissed homescreen install');
-            } else {
-              console.log('User added to homescreen');
-            }
-            savedPrompt = null;                                                                
-          });
-        }
-      })
-    })
-  
   </script>
 </body>
 </html>
