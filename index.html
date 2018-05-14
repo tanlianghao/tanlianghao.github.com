@@ -30,7 +30,7 @@
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('./sw.js').then(function(registration) {
       // Registration was successful
-      console.log('succesful register:', registration.scope);
+       console.log('succesful register:', registration.scope);
     }).catch(function(err) {
       console.log('defail register:', err);
     })
