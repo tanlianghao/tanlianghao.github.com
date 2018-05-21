@@ -1,9 +1,10 @@
 {
   "name": "progressive web app",
-  "short_name":"web app",
+  "short_name":"myweb",
   "start_url":"/index.html",
-  "theme_color":"red",
-  "background_color":"yellow",
+  "display":"fullscreen",
+  "theme_color":"#000",
+  "background_color":"#000",
   "icons": [
     {
       "src": "./images/homescreen.png",
