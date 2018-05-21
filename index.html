@@ -35,6 +35,12 @@
         }).catch(function(err) {
           console.log('defail register:', err);
         })
+        self.addEventListener('install', function(event) {
+          event.waitUntil(self.skipWaiting());
+        })
+        self.addEventListener('activate', function(event) {
+          event.waitUntil(self.clients.claim());
+        })
       }
   </script>
 </body>
