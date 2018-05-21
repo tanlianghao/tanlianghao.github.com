@@ -27,9 +27,6 @@
   <!-- javaScript -->
   <script async src="./js/main.js"></script>
   <script>
-    window.addEventListener('load', function(){
-      var btnSave = document.getElementById('btnSave');
-      var savePrompt;
       // Register the service worker
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('./sw.js').then(function(registration) {
@@ -39,8 +36,6 @@
           console.log('defail register:', err);
         })
       }
-    })
-  
   </script>
 </body>
 </html>
